@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Pokemon
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <img src="/assets/banner.jpg" alt="" />
+      <ion-card-header>
+        <ion-card-subtitle>Demo Pokeapi</ion-card-subtitle>
+        <ion-card-title>POKEMON</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Atrapalos todos.</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-list lines="none">
+      <ion-list-header>
+        <ion-label>Lista</ion-label>
+      </ion-list-header>
+      <ion-item  *ngFor="let pokemon of pokemons?.results" href="/pokemon/pokemon-info/{{pokemon.name}}">
+        <ion-icon slot="start" color="medium" name="book"></ion-icon>
+        <ion-label>{{ pokemon.name }}</ion-label>
+      </ion-item>
+    </ion-list>
+</ion-content>
