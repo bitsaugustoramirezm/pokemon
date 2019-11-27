@@ -4,8 +4,6 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PokemonInfoPageRoutingModule } from './pokemon-info-routing.module';
-
 import { PokemonInfoPage } from './pokemon-info.page';
 
 @NgModule({
@@ -13,7 +11,6 @@ import { PokemonInfoPage } from './pokemon-info.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    PokemonInfoPageRoutingModule
   ],
   declarations: [PokemonInfoPage]
 })

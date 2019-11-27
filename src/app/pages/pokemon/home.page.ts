@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { PokeApi } from '../../core/services/pokeapi.service';
-import { PokemonsList } from '../../core/interfaces/pokemon';
+import { PokemonsList } from '../../core/interfaces/pokemonList';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +21,6 @@ export class HomePage {
   fetchPokemons() {
     this.PokeApi.getPokemonsList()
       .subscribe(pokemons => {
-        console.log(pokemons);
         this.pokemons = pokemons;
       });
   }
